@@ -1,0 +1,55 @@
+ext {
+
+    android = [
+            compileSdkVersion: 27,
+            applicationId    : "com.ztesoft.mvparchitectureandroid",
+            minSdkVersion    : 15,
+            targetSdkVersion : 27,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    def dependVersion = [
+            support           : "27.1.1",
+            retrofit          : "2.5.0",
+            okhttp            : "3.12.1",
+            rxjava            : "2.2.5",
+            rxandroid         : "2.1.0",
+            dagger2           : "2.14.1",
+            gson              : "2.8.5",
+            greendao          : "3.2.2",
+            database_sqlcipher: "4.0.1@aar",
+            butterknife       : "8.4.0",
+            rxpermissions     : "0.10.2",
+            BRVAH             : "2.9.30"
+    ]
+
+    dependencies = [
+            "appcompat-v7"                 : "com.android.support:appcompat-v7:${dependVersion.support}",
+            "design"                       : "com.android.support:design:${dependVersion.support}",
+            //http
+            "retrofit"                     : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
+            "okhttp"                       : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",
+            "logging-interceptor"          : "com.squareup.okhttp3:logging-interceptor:${dependVersion.okhttp}",
+            "converter-gson"               : "com.squareup.retrofit2:converter-gson:${dependVersion.retrofit}",//转换器，请求结果转换成Model
+            "adapter-rxjava2"              : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.retrofit}",//配合Rxjava 使用
+            //rx
+            "rxjava"                       : "io.reactivex.rxjava2:rxjava:${dependVersion.rxjava}",
+            "rxandroid"                    : "io.reactivex.rxjava2:rxandroid:${dependVersion.rxandroid}",
+            //dagger2
+            "dagger"                       : "com.google.dagger:dagger:${dependVersion.dagger2}",
+            "agger-compiler"               : "com.google.dagger:dagger-compiler:${dependVersion.dagger2}",
+            //gson
+            "gson"                         : "com.google.code.gson:gson:${dependVersion.gson}",
+            //greendao
+            "greendao"                     : "org.greenrobot:greendao:${dependVersion.greendao}",
+            "database-sqlcipher"           : "net.zetetic:android-database-sqlcipher:${dependVersion.database_sqlcipher}",
+            //Butter Knife
+            "butterknife"                  : "com.jakewharton:butterknife:${dependVersion.butterknife}",
+            "butterknife-compiler"         : "com.jakewharton:butterknife-compiler:${dependVersion.butterknife}",
+            //permissions
+            "rxpermissions"                : "com.github.tbruyelle:rxpermissions:${dependVersion.rxpermissions}",
+            //BRVAH
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:${dependVersion.BRVAH}"
+    ]
+}
